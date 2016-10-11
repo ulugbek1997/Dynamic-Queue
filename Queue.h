@@ -24,8 +24,6 @@ public:
     bool isEmpty();
     int getCounter();
     void show();
-    bool isLastElement();
-    bool isFirstElement();
 };
 
 #endif /* Queue_h */
