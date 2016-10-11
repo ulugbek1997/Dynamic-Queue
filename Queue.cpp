@@ -27,13 +27,8 @@ void Queue::add(int element){
     }
     else{
         counter++;
-        if(isFirstElement()){
-            arrayOfInt[++rear] = element;
-        }
-        else{
-            arrayOfInt[++rear] = element;
-            front = 0;
-        }
+        arrayOfInt[++rear] = element;
+        front = 0;
     }
 }
 
@@ -44,11 +39,7 @@ int Queue::remove(){
     }
     else{
         counter--;
-        if (isLastElement()){
-            rear--;
-            return arrayOfInt[front--];
-        }
-        return arrayOfInt[front--];
+        return arrayOfInt[++front];
     }
 }
 
@@ -66,22 +57,9 @@ bool Queue::isEmpty(){
         return false;
 }
 
-bool Queue::isFirstElement(){
-    if (counter == 1)
-        return true;
-    else
-        return false;
-}
-
-bool Queue::isLastElement(){
-    if (counter == size)
-        return true;
-    else
-        return false;
-}
 
 void Queue::show(){
-    for (int i = rear; i < front; i++)
+    for (int i = front; i <= rear; i++)
         std::cout<<arrayOfInt[i]<<" ";
 }
 
