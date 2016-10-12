@@ -16,14 +16,13 @@ private:
     int* arrayOfInt;
     
 public:
-    Queue();
-    void init(int);
-    void add(int);
-    int remove();
-    bool isFull();
-    bool isEmpty();
-    int getCounter();
-    void show();
+    Queue(); // Constructor to create an object
+    void init(int); // Initializing an object
+    void add(int); // Adding element
+    int remove(); // Removing element
+    bool isFull(); // Checking full or not
+    bool isEmpty(); //Checking empty or not
+    int getCounter(); // Getting how many elements the queue contains
 };
 
 #endif /* Queue_h */

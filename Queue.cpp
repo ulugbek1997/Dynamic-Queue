@@ -58,12 +58,6 @@ bool Queue::isEmpty(){
 }
 
 
-void Queue::show(){
-    for (int i = front; i <= rear; i++)
-        std::cout<<arrayOfInt[i]<<" ";
-}
-
-
 
 
 
